@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 11:26:02 by tornelas          #+#    #+#             */
-/*   Updated: 2023/09/04 12:33:31 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/09/12 21:04:58 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,12 @@ void	ft_putnbr(int nb)
 		n = n * -1;
 	}
 	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		a = n + '0';
-		write(1, &a, 1);
-	}
+		ft_putnbr(n / 10);	
+	a = n % 10 + '0';
+	write(1, &a, 1);
 }
 
-/*int	main()
+int	main()
 {
 	ft_putnbr(42);
-}*/
+}
