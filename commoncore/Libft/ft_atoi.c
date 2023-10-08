@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:35:32 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 21:55:51 by tornelas         ###   ########.fr       */
+/*   Created: 2023/10/08 19:51:37 by tornelas          #+#    #+#             */
+/*   Updated: 2023/10/08 19:54:00 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char a)
+int	ft_atoi(char *str)
 {
-	if (a >= 32 && a <= 126)
+	int	i;
+	int	sign;
+	int	n;
+
+	i = 0;
+	sign = 1;
+	n = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		return (1);
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	else
-		return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		n = (str[i] - '0') + (n * 10);
+		i++;
+	}
+	return (n * sign);
 }

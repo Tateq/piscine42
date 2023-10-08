@@ -6,15 +6,15 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:34:52 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/04 14:35:06 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/08 21:55:43 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char a)
+int	ft_isascii(int a)
 {
-	if (a >= 0 && a <= 127)
+	if (0 <= a && a <= 127)
 	{
-		return (a);
+		return (1);
 	}
 	else
 		return (0);

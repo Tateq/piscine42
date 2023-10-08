@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:35:32 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 21:55:51 by tornelas         ###   ########.fr       */
+/*   Created: 2023/10/08 16:04:43 by tornelas          #+#    #+#             */
+/*   Updated: 2023/10/08 18:01:09 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char a)
+void	*ft_memchr(char *str, int c, unsigned int n)
 {
-	if (a >= 32 && a <= 126)
+	int	i;
+
+	i = 0;
+	while (n > 0 && str[i] != '\0')
 	{
-		return (1);
+		if (str[i] == c)
+		{
+			return ((void *)str + i);
+		}
+		n--;
+		i++;
 	}
-	else
-		return (0);
+	return (0);
 }
+
+/*
+int	main()
+{
+	char	str[] = "ameixa";
+	int		c = 'i';
+	unsigned int	n;
+	n = 5;
+	char	*result;
+	result = (char *)ft_memchr(str, c, n);
+	printf("%s", result);
+}*/
