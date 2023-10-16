@@ -6,11 +6,13 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:51:37 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 19:54:00 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/16 17:52:49 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -21,7 +23,7 @@ int	ft_atoi(char *str)
 	n = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while ((str[i] == '-' || str[i] == '+') && ft_isdigit(str[i +1]))
 	{
 		if (str[i] == '-')
 			sign *= -1;

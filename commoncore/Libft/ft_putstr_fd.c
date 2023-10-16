@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:38:01 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 13:25:59 by tornelas         ###   ########.fr       */
+/*   Created: 2023/10/16 15:26:04 by tornelas          #+#    #+#             */
+/*   Updated: 2023/10/16 15:30:27 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
+		write (fd, &s[i], 1);
 		i++;
 	}
-	return (i);
 }
+
+/*int	main()
+{
+	char *s = "hatsune miku is the best";
+	ft_putstr_fd(s, 1);
+}*/

@@ -6,22 +6,27 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:12:24 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/05 15:23:21 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/12 22:22:39 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str && *str != (unsigned char) c)
 	{
-		if (str[i] == c)
-		{
-			return ((char *)&str[i]);
-		}
-		i++;
+		str++;
 	}
+	if (*str == (unsigned char)c)
+		return ((char *)str);
 	return (0);
 }
+
+/*int	main()
+{
+	char *str = "Batatinha quando nasce espalha a rama pelo chao.";
+	int	c = 's';
+	
+	printf("%s", ft_strchr(str, c));
+}*/

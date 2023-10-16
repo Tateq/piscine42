@@ -6,31 +6,31 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:04:43 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 18:01:09 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:29:22 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(char *str, int c, unsigned int n)
-{
-	int	i;
+#include "libft.h"
 
+void	*ft_memchr(const void *str, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*s;
+
+	s = (unsigned char *)str;
 	i = 0;
-	while (n > 0 && str[i] != '\0')
+	while (n > i)
 	{
-		if (str[i] == c)
-		{
-			return ((void *)str + i);
-		}
-		n--;
+		if (s[i] == (unsigned char)c)
+			return (&s[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
-/*
-int	main()
+/*int	main()
 {
-	char	str[] = "ameixa";
+	char	str[] = "ameixa";franci
 	int		c = 'i';
 	unsigned int	n;
 	n = 5;

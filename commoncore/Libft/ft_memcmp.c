@@ -6,18 +6,20 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 18:03:16 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 18:51:37 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:36:44 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(void *str1, void *str2, int n)
-{
-	char	*s1;
-	char	*s2;
-	int		i;
+#include "libft.h"
 
-	s1 = str1;
-	s2 = str2;
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
+{
+	unsigned char	*s1;
+	unsigned char	*s2;
+	size_t			i;
+
+	s1 = (unsigned char *) str1;
+	s2 = (unsigned char *)str2;
 	i = 0;
 	while (i < n)
 	{

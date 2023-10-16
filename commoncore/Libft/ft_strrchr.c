@@ -6,27 +6,34 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:36:10 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/05 15:23:20 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/16 20:02:20 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	while (str[i])
 		i++;
-	}
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 		{
 			return ((char *)&str[i]);
 		}
-		else
-			i--;
+		i--;
 	}
 	return (0);
 }
+
+/*int	main()
+{
+	char *str = "!chocolate com pimenta!";
+	int	c = 'e';
+	
+	printf("%s", ft_strrchr(str, c));
+}*/

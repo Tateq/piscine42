@@ -6,13 +6,11 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:31:44 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/08 15:52:44 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:34:09 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(char *str);
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
