@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 17:15:14 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 17:30:03 by tornelas         ###   ########.fr       */
+/*   Created: 2023/10/18 16:52:19 by tornelas          #+#    #+#             */
+/*   Updated: 2023/10/18 17:16:44 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	ft_putstr_fd(s, fd);
-	write (fd, "\n", 1);
+	unsigned int	i;
+
+	i = 0;
+	if (!s)
+		return;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-/*int	main()
+/*void	f(unsigned int i, char *a)
 {
-	char	*s = "Hatsune Miku is the best";
-	ft_putendl_fd(s, 1);
+	*a += 2;
+}
+
+int	main()
+{
+	char	str[] = "Batata";
+
+	ft_striteri(str, f);
+	ft_putendl_fd(str, 1);
+
+
 }*/

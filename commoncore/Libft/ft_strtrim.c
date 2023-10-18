@@ -14,37 +14,26 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
+	size_t	start;
+	size_t	end;
 	char	*strim;
-	int		len;
 
-	i = 0;
-	j = 0; 
-	len = (ft_strlen(s1) - ft_strlen(set));
-	strim = (char *)malloc((sizeof (char)) * (len + 1));
-	if (!s1 || !set || !strim)
+	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
-		if (s1[i] != set[i])
-		{
-			strim[j] = s1[i];
-			
-		}
-		else if (s1[i] == set[i])
-			i++;
-		i++;
-		j++;
-	}
-	strim[j] = '\0';
+	end = ft_strlen(s1) - 1;
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	while (s1[end] && ft_strchr(set, s1[end]))
+		end--;
+	strim = ft_substr(s1, start, end - start + 1);
 	return (strim);
 }
 
-int	main()
+/*int	main()
 {
-	char *s1 = "Hatsune Miku is Hatsune";
-	char *set = "Hatsune";
+	char *s1 = "  Hatsune Miku is Hatsune Miku ";
+	char *set = " ";
 
 	printf("%s", ft_strtrim(s1, set));
-}
+}*/

@@ -32,8 +32,8 @@ char	*ft_strdup(char *str)
 
 /*int main(void)
 {
-    char str[] = "abacate";
+    char str[] = "";
 
-    printf("%s", ft_strdup(str));
+    printf("%s\n", ft_strdup(str));
     return (0);
 }*/
