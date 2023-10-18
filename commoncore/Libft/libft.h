@@ -47,7 +47,10 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_strtrim(char const *s1, char const *set);
+<<<<<<< HEAD
 char			*ft_itoa(int n);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+=======
+>>>>>>> 3afaf94eebb6d934f1138f41381bedf245295ccc
 
 #endif
