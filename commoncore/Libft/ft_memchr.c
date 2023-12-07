@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:04:43 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 18:29:22 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:37:45 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 /*int	main()
 {
-	char	str[] = "ameixa";franci
+	char	str[] = "ameixa";
 	int		c = 'i';
 	unsigned int	n;
 	n = 5;

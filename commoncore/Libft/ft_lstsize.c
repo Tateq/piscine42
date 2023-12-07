@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Created: 2023/11/15 15:17:07 by tateq             #+#    #+#             */
+/*   Updated: 2023/11/15 16:39:49 by tateq            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (n > 0)
+	while (lst)
 	{
-		((char *)str)[i] = 0;
+		lst = lst->next;
 		i++;
-		n--;
 	}
+	return (i);
 }
-
-/*int	main()
-{
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
-}*/

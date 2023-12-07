@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Created: 2023/11/15 16:58:00 by tornelas          #+#    #+#             */
+/*   Updated: 2023/11/15 16:58:08 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*temp;
 
-	i = 0;
-	while (n > 0)
+	if (!lst || !new)
+		return ;
+	if (!(*lst))
 	{
-		((char *)str)[i] = 0;
-		i++;
-		n--;
+		*lst = new;
+		return ;
 	}
+	temp = *lst;
+	while (temp->next)
+		temp = temp->next;
+	temp ->next = new;
 }
-
-/*int	main()
-{
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
-}*/

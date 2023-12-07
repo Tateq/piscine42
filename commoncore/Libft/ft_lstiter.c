@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Created: 2023/11/15 16:09:25 by tateq             #+#    #+#             */
+/*   Updated: 2023/11/15 16:19:23 by tateq            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-
-	i = 0;
-	while (n > 0)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		((char *)str)[i] = 0;
-		i++;
-		n--;
+		f(lst->content);
+		lst = lst ->next;
 	}
 }
 
-/*int	main()
+/*void	print_content(void *content)
 {
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
+	printf("Content: %s\n", (char *)content);
 }*/

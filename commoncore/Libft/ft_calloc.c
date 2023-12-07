@@ -6,32 +6,20 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:55:25 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/12 22:11:30 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:29:20 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(int n_elementos, int elemento_tam)
+void	*ft_calloc(size_t n, size_t size)
 {
-	int		total_size;
-	char	*ptr;
+	size_t		total_size;
+	char		*ptr;
 
-	total_size = n_elementos * elemento_tam;
+	total_size = n * size;
 	ptr = malloc(total_size);
 	if (ptr != 0)
 		memset(ptr, 0, total_size);
 	return (ptr);
 }
-
-/*int	main()
-{
-	int	nElementos;
-	int elementoTam;
-	char	*result;
-
-	nElementos = 2;
-	elementoTam = 2;
-	result = (char *)ft_calloc(nElementos, elementoTam);
-	printf("%s", result);
-}*/

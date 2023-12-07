@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 16:52:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/11/15 13:43:35 by tateq            ###   ########.fr       */
+/*   Created: 2023/11/15 16:21:24 by tateq             #+#    #+#             */
+/*   Updated: 2023/11/15 16:53:15 by tateq            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	i;
+	t_list	*head;
+	t_list	*tmp;
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i] != '\0')
+	head = NULL;
+	while (lst)
 	{
-		f(i, &s[i]);
-		i++;
+		tmp = ft_lstnew((*f)(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, tmp);
+		lst = lst->next;
 	}
+	return (head);
 }
-
-/*void	f(unsigned int i, char *a)
-{
-	*a += 2;
-}
-
-int	main()
-{
-	char	str[] = "Batata";
-
-	ft_striteri(str, f);
-	ft_putendl_fd(str, 1);
-}*/

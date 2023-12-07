@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -51,7 +50,7 @@ char	*ft_itoa(int n)
 		n /= 10;
 	}
 	if (size == 0)
-		str[0] = '-'; 
+		str[0] = '-';
 	return (str);
 }
 
@@ -61,18 +60,3 @@ char	*ft_itoa(int n)
 
 	printf ("%s", ft_itoa(n));
 }*/
-=======
-#include "libft.h"
-
-char	*ft_itoa(int n)
-{
-	char	*str;
-
-	if (n < 0)
-		ft_putchar_fd("-", 1);
-	if ( n >= 0 && n <= 9)
-	{
-		
-	}
-}
->>>>>>> 3afaf94eebb6d934f1138f41381bedf245295ccc

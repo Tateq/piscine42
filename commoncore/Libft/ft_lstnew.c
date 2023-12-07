@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Created: 2023/11/15 12:51:44 by tateq             #+#    #+#             */
+/*   Updated: 2023/11/22 16:16:24 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*new;
 
-	i = 0;
-	while (n > 0)
+	new = malloc(sizeof(t_list));
+	if (!new)
 	{
-		((char *)str)[i] = 0;
-		i++;
-		n--;
+		return (NULL);
 	}
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
 }
 
-/*int	main()
+/*int	main (void)
 {
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
+	char	*str;
+	
+	t_list	*elem;
+	str = (char *)malloc(6*sizeof (char));
+	str = "HELLO";
+	elem =ft_lstnew((void *)str);
+	printf ("%s\n", (char *)elem->content);
 }*/

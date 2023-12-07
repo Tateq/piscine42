@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:36:10 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 20:02:20 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/06 08:07:40 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ char	*ft_strrchr(const char *str, int c)
 
 /*int	main()
 {
-	char *str = "!chocolate com pimenta!";
-	int	c = 'e';
+	char *str = "teste string teste";
+	int	c = 's';
 	
 	printf("%s", ft_strrchr(str, c));
 }*/

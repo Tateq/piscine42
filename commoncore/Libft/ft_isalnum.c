@@ -6,16 +6,16 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:21:20 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/04 14:24:44 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/06 06:45:49 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char a)
+int	ft_isalnum(int a)
 {
 	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')
 		|| (a >= '0' && a <= '9'))
 	{
-		return (a);
+		return (1);
 	}
 	else
 		return (0);

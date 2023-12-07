@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tornelas <tornelas <marvin@42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Created: 2023/11/15 15:46:14 by tateq             #+#    #+#             */
+/*   Updated: 2023/11/15 16:57:05 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int	i;
-
-	i = 0;
-	while (n > 0)
-	{
-		((char *)str)[i] = 0;
-		i++;
-		n--;
-	}
+	if (!lst || !del)
+		return ;
+	(del)(lst->content);
+	free(lst);
+	lst = NULL;
 }
 
-/*int	main()
+/*void	del_content(void *content)
 {
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
+	free(content);
 }*/
