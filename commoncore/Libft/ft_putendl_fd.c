@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:15:14 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 17:30:03 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:03:05 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ void	ft_putendl_fd(char *s, int fd)
 
 /*int	main()
 {
-	char	*s = "Hatsune Miku is the best";
-	ft_putendl_fd(s, 1);
+	ft_putendl_fd("Hello world :) (with newline!)", 1);
 }*/

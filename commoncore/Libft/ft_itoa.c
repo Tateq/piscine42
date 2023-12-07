@@ -56,7 +56,11 @@ char	*ft_itoa(int n)
 
 /*int	main()
 {
-	int	 n = 42;
+	int	a = -12;
+	int	b = 12;
+	int c = 'a';
 
-	printf ("%s", ft_itoa(n));
+	printf ("%s\n", ft_itoa(a));
+	printf ("%s\n", ft_itoa(b));
+	printf ("%s\n", ft_itoa(c));
 }*/

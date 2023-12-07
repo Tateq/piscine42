@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:55:25 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/06 17:29:20 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:25:07 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_calloc(size_t n, size_t size)
 	total_size = n * size;
 	ptr = malloc(total_size);
 	if (ptr != 0)
-		memset(ptr, 0, total_size);
+		ft_memset(ptr, 0, total_size);
 	return (ptr);
 }

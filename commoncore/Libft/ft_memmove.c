@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 23:05:00 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 17:53:33 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:02:13 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* 
-int	main()
+/* int	main()
 {
-	char	src[] = "12344448";
-	char	dest[] = "67890";
+	char	dest[] = "This is a string.";
+	char	src[] = "Another string";
 
-
-	ft_memmove(dest, src, 7);
-	printf ("%s\n", dest);
-	memmove(dest, src, 7);
-	printf ("%s\n", dest);
-
-}
-*/
+	printf ("String before ft_memmove: %s\n", dest);
+	ft_memmove(dest, src, 18);
+	printf ("String after ft_memmove: %s\n", dest);
+}*/

@@ -6,16 +6,16 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:39:50 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/06 17:27:54 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:23:10 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+
 # include <stdlib.h>
-# include <string.h>
+
 # include <unistd.h>
 
 int				ft_isalnum(int a);

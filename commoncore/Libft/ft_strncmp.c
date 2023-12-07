@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:34:11 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 18:07:15 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:07:59 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,20 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-/*int	main()
+/*int	main(int argc, char **argv)
 {
-	char *s1 = "Ameixa"
+	const char *s1;
+	const char *s2;
+	size_t n;
+
+	s1 = argv[1];
+	s2 = argv[2];
+	n = *argv[3];
+	if (argc == 4)
+	{
+		if (ft_strncmp(s1, s2, n) == 0)
+			printf ("%d || The strings are equal.\n", ft_strncmp(s1, s2, n));
+		else
+			printf ("%d || The strings are different.\n", ft_strncmp(s1, s2, n));
+	}
 }*/

@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:56:49 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 19:45:26 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:09:43 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /*int	main()
 {
-	char *s1 = "  Hatsune Miku is Hatsune Miku ";
-	char *set = " ";
+	char const *str = "test string for test";
+	char const *set = "test";
 
-	printf("%s", ft_strtrim(s1, set));
+	printf ("String before ft_strtrim: %s\n", str);
+	printf ("Trimmed string: %s\n", ft_strtrim(str, set));
 }*/

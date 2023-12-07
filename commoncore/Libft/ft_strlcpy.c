@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:31:44 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 13:34:09 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:06:19 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	return (len);
 }
 
-/*
-int	main(void)
+/*int	main()
 {
-	char src[] = "bananas";
-	char dest[] = "morango";
-	printf("%d %s",ft_strlcpy(dest, src, 10), dest);
+	char	dest[] = "This is a string.";
+	char	src[] = "Another string";
+
+	printf ("String before ft_strlcpy: %s\n", dest);
+	ft_strlcpy(dest, src, 18);
+	printf ("String after ft_strlcpy: %s\n", dest);
 }*/

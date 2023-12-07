@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:51:37 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 18:12:30 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 00:58:29 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,7 @@ int	ft_atoi(const char *str)
 	return (n * sign);
 }
 
-/*int main()
-{
-	char *str = "   +0125bg55";
-
-	printf ("%d\n", ft_atoi(str));
-}*/
-
-/*int main(int argc, char *argv[])
+/*int main(int argc, char **argv)
 {
 	int n;
 

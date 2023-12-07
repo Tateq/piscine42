@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:56:07 by tateq             #+#    #+#             */
-/*   Updated: 2023/11/06 16:00:32 by tateq            ###   ########.fr       */
+/*   Updated: 2023/12/07 01:14:57 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	**ft_split(char const *s, char c)
 
 /*int	main()
 {
-	char *str = "/alecrim *dourado//que/nasceu/ no .campo! / ";
+	char *str = "/Test / *string//for/test/./ ";
 	char sep = '/';
 	char **split = ft_split(str, sep);
 	int	i = 0;

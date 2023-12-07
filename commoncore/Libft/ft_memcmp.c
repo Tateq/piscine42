@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 18:03:16 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 18:36:44 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:01:22 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	char	str[] = "ameixa";
 	char	str2[] = "ameoxa";
-	int	n = 2;
+	int		n;
 	int result;
 
-	result = ft_memcmp(str, str2, n);
+	result = ft_memcmp(str, str2, 7);
 	if(result > 0)
-		printf ("string 1 is bigger than string 2");
+		printf ("%i || That means string 1 is bigger than string 2\n", result);
 	else if(result < 0)
-		printf ("string 2 is bigger than string 1");
+		printf ("%i || That means string 2 is bigger than string 1\n", result);
 	else
-		printf ("string 1 is equal string 2");
+		printf ("%i || That means string 1 is equal string 2\n", result);
 }*/

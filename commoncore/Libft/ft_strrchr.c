@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:36:10 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/06 08:07:40 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:08:50 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,16 @@ char	*ft_strrchr(const char *str, int c)
 	return (0);
 }
 
-/*int	main()
+/*int	main(int argc, char **argv)
 {
-	char *str = "teste string teste";
-	int	c = 's';
-	
-	printf("%s", ft_strrchr(str, c));
+	const char *str;
+	int	c;
+
+	str = argv[1];
+	c = *argv[2];
+	if (argc > 1)
+	{
+		printf ("String before ft_strrchr: %s\n", str);
+		printf("String after ft_strrchr: %s\n", ft_strrchr(str, c));
+	}
 }*/

@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 22:15:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/12/05 21:43:14 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 00:58:48 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,19 @@ void	ft_bzero(void *str, size_t n)
 	}
 }
 
-/*int	main()
+/*int main(int argc, char **argv)
 {
-	char *str = "test test test";
-	size_t i = 0;
-	ft_bzero(str, i);
-	printf("%s", str);
+    if (argc == 3) 
+	{
+        char *str = argv[1];
+    	size_t size = ft_atoi(argv[2]);
+
+    	ft_putstr_fd ("String before ft_bzero: ", 1);
+		ft_putendl_fd (str, 1);
+   		ft_bzero(str, size);
+    	ft_putstr_fd ("String after ft_bzero: ", 1);
+		ft_putendl_fd (str, 1);
+    }
+	else 
+		ft_putendl_fd("ERROR\nValid input: <string> <size>", 1);  
 }*/

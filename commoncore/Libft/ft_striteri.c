@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:52:19 by tornelas          #+#    #+#             */
-/*   Updated: 2023/11/15 13:43:35 by tateq            ###   ########.fr       */
+/*   Updated: 2023/12/07 01:09:23 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 /*void	f(unsigned int i, char *a)
 {
-	*a += 2;
+	*a -= 2;
 }
 
 int	main()
 {
-	char	str[] = "Batata";
+	char	str[] = "Dcvcvc";
 
 	ft_striteri(str, f);
 	ft_putendl_fd(str, 1);

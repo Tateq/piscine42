@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:23:00 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 19:26:39 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:05:40 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (s3);
 }
 
-/*int    main()
+/*int	main()
 {
-    const char *s1 = "Hatsune is ";
-    const char *s2 = "the best!";
-    printf ("%s",ft_strjoin(s1, s2) );
+	char const	s1[] = "This string ";
+	char const	s2[] = "is concatenated. :o";
+
+	printf ("%s\n", ft_strjoin(s1, s2));
 }*/

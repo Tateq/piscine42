@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:49:43 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 17:04:12 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:10:08 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-/*int	 main()
+/*int	main()
 {
-	char const *s = "Hatsune miku is the best";
-	unsigned int start = 12;
-	size_t len = 15;
+	char	str[] = "The original string, and this is the substring.";
+	char	*sub;
 
-	char *sub = ft_substr(s, start, len);
-    printf("%s", sub);
+	sub = ft_substr(str, 25, 30);
+	printf ("%s\n", str);
+	printf ("%s\n", sub);
 }*/

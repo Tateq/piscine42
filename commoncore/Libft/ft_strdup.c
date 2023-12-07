@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:29:02 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/11 13:34:24 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:05:18 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ char	*ft_strdup(char *str)
 	return (dest);
 }
 
-/*int main(void)
+/*int	main()
 {
-    char str[] = "";
+	char	str[] = "This string is duplicated. :O";
 
-    printf("%s\n", ft_strdup(str));
-    return (0);
+	printf ("%s\n", ft_strdup(str));
 }*/

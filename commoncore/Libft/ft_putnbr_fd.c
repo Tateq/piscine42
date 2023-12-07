@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:31:42 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 17:52:26 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:03:22 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ void	ft_putnbr_fd(int n, int fd)
 
 /*int	main()
 {
-	int	n = 42;
-	
-	ft_putnbr_fd(n, 1);
+	ft_putnbr_fd(42, 1);
+	ft_putendl_fd("", 1);
+	ft_putnbr_fd(-42, 1);
+	ft_putendl_fd("", 1);
+	ft_putnbr_fd(01, 1);
+	ft_putendl_fd("", 1);
 }*/

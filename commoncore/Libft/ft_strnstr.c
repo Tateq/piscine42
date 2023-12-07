@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:10:32 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/12 21:59:21 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:08:33 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 
 /*int	main()
 {
-	char str[] = "acdegf abc";
-	char find[] = "abc";
-	int size = 15;
+	char	str[] = "Test string for test.";
+	char	find[] = "str";
 
-	printf ("%s", ft_strnstr(str, find, size));
+	printf ("String before ft_strnstr: %s\n", str);
+	printf ("String after ft_strnstr: %s\n", ft_strnstr(str, find, 22));
 }*/

@@ -6,7 +6,7 @@
 /*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:06:13 by tornelas          #+#    #+#             */
-/*   Updated: 2023/10/16 15:20:29 by tornelas         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:02:46 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putchar_fd(char c, int fd)
 
 /*int	main()
 {
-	char	c = 'b';
-	ft_putchar_fd(c, 1);
+	ft_putchar_fd(':', 1);
+	ft_putchar_fd(')', 1);
+	ft_putchar_fd('\n', 1);
 }*/

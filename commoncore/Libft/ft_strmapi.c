@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tateq <tateq@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tornelas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:34:35 by tateq             #+#    #+#             */
-/*   Updated: 2023/11/15 13:44:44 by tateq            ###   ########.fr       */
+/*   Updated: 2023/12/07 01:06:57 by tornelas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*char	etoa(unsigned int i, char a)
 {
 	char e;
-	
+
 	e = 'a';
 	if (a == 'e')
 		a = e;
